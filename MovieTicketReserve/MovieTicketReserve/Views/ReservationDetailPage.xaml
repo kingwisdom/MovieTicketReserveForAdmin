@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieTicketReserve.Views.ReservationDetailPage"
+             BackgroundColor="#263A4F">
+    <ContentPage.Content>
+        <StackLayout Margin="20">
+            <Grid Margin="0,0,0,20" ColumnDefinitions="1.5*,7*,1.5*">
+                <ImageButton BackgroundColor="Transparent" WidthRequest="25" HeightRequest="25" Grid.Column="0" HorizontalOptions="Center" Clicked="ImageButton_Clicked" />
+                <Label Text="Reservation Detail" HorizontalOptions="Center" Grid.Column="1" FontSize="Title" TextColor="White" />
+            </Grid>
+            <Frame BackgroundColor="#131C25" Margin="0,20,0,0" HasShadow="False">
+                <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="0.5*,0.5*">
+                    <Label Text="Reservation Id" TextColor="#F38914" Grid.Row="0" Grid.Column="0" />
+                    <Label x:Name="LblReservationId" TextColor="White" Grid.Row="0" Grid.Column="1" />
+                    
+                    <Label Text="Reservation Time" TextColor="#F38914" Grid.Row="1" Grid.Column="0" />
+                    <Label x:Name="LblReservationTime" TextColor="White" Grid.Row="1" Grid.Column="1" />
+                    
+                    <Label Text="Customer Name" TextColor="#F38914" Grid.Row="2" Grid.Column="0" />
+                    <Label x:Name="LblCustomer" TextColor="White" Grid.Row="2" Grid.Column="1" />
+                    
+                    <Label Text="Movie Name" TextColor="#F38914" Grid.Row="3" Grid.Column="0" />
+                    <Label x:Name="LblMovieName" TextColor="White" Grid.Row="3" Grid.Column="1" />
+                    
+                    <Label Text="Email" TextColor="#F38914" Grid.Row="4" Grid.Column="0" />
+                    <Label x:Name="LblEmail" TextColor="White" Grid.Row="4" Grid.Column="1" />
+                    
+                    <Label Text="Qty" TextColor="#F38914" Grid.Row="5" Grid.Column="0" />
+                    <Label x:Name="LblQty" TextColor="White" Grid.Row="5" Grid.Column="1" />
+                    
+                    <Label Text="Price" TextColor="#F38914" Grid.Row="6" Grid.Column="0" />
+                    <Label x:Name="LblPrice" TextColor="White" Grid.Row="6" Grid.Column="1" />
+                    
+                    <Label Text="Phone" TextColor="#F38914" Grid.Row="7" Grid.Column="0" />
+                    <Label x:Name="LblPhone" TextColor="White" Grid.Row="7" Grid.Column="1" />
+                </Grid>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:renderers="clr-namespace:MovieTicketReserve.Renderer"
+             x:Class="MovieTicketReserve.Views.AddMoviePage" BackgroundColor="#263A4F">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="15,20,15,0">
+                <Grid ColumnDefinitions="1.5*,7*,1.5*">
+                    <ImageButton Source="back.png" VerticalOptions="Start" Grid.Column="0" HeightRequest="25" WidthRequest="25" x:Name="back" Clicked="back_Clicked" BackgroundColor="Transparent" />
+                    <Label Text="Add Movie" TextColor="White" VerticalOptions="Start" HorizontalOptions="Center"
+                           FontSize="Title" Grid.Row="1" />
+                </Grid>
+                <StackLayout Margin="0,10,0,0" Spacing="4">
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntName" Placeholder="Please Enter Movie Name" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntLanguage" Placeholder="Language" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntRating" Placeholder="Rating" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntGenre" Placeholder="Genre" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntTrailorUrl" Placeholder="Trailor Url" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntPlayingDate" Placeholder="Playing Date" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntPlayingTime" Placeholder="Playing Time" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame> 
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntDuration" Placeholder="Duration" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <Frame Padding="2" HasShadow="False">
+                        <renderers:BorderlessEntry x:Name="EntTicketPrice" Placeholder="Ticket Price" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <Frame Padding="2" HasShadow="False">
+                        <Editor x:Name="EntDescription" Placeholder="Decription" TextColor="Black" PlaceholderColor="#131C25" />
+                    </Frame>
+                    <ImageButton HorizontalOptions="End" Margin="0,10,0,0" HeightRequest="80" WidthRequest="100" x:Name="uploadImg" Clicked="uploadImg_Clicked" />
+                    
+                    <Button  Margin="0,40,0,0" Text="Save"  x:Name="Save" WidthRequest="300" CornerRadius="20"  TextColor="White" Clicked="Save_Clicked" Visual="Material">
+                        <Button.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#F38914" Offset="0.1" />
+                                <GradientStop Color="Red" Offset="1.0" />
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

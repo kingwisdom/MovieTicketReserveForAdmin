@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MovieTicketReserve.Views.MovieListPage" BackgroundColor="#263A4F">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="20" ColumnDefinitions="1.5*,7*,1.5*">
+                <ImageButton Source="back.png" HorizontalOptions="Start" Grid.Column="0" HeightRequest="25" WidthRequest="25" Clicked="ImageButton_Clicked" BackgroundColor="Transparent" />
+                <ImageButton Source="plus.png" HorizontalOptions="Center" x:Name="add" Grid.Column="2" HeightRequest="30" WidthRequest="30" Clicked="add_Clicked" BackgroundColor="Transparent" />
+                
+            </Grid>
+
+            <CollectionView Margin="10,0,10,0" x:Name="CvMovies" SelectionMode="Single" SelectionChanged="CvMovies_SelectionChanged"
+                            RemainingItemsThreshold="1" RemainingItemsThresholdReached="CvMovies_RemainingItemsThresholdReached">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Span="2" Orientation="Vertical" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Spacing="5" Padding="10" Margin="15,0">
+                            <Frame Padding="0" CornerRadius="15">
+                                <Image Source="images.jpg" Aspect="Fill" BackgroundColor="White" HeightRequest="220" WidthRequest="130"/>
+                            </Frame>
+                            <Label TextColor="White" Text="{Binding Name}" HorizontalTextAlignment="Center" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
